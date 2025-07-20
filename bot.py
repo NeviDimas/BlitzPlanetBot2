@@ -3,7 +3,7 @@ import zipfile
 import shutil
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import FSInputFile
-from aiogram.utils import executor
+# from aiogram.utils import executor
 from processor import run_inspector, run_redactor, run_calculator
 
 API_TOKEN = "7803508934:AAHSH4CV5Q28Lo2kYAxlIzGQjMxHgxID9po"
@@ -49,4 +49,4 @@ async def handle_zip(message: types.Message):
         shutil.rmtree(temp_dir, ignore_errors=True)
 
 if __name__ == "__main__":
-    executor.start_polling(dp, skip_updates=True)
+    Dispatcher.start_polling(dp, skip_updates=True)
